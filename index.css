@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+header {
+    background: #F59C15;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    height: 150px;
+}
+
+nav {
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+body {
+    background: #fdc706ab;
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 2000px;
+}
+
+img {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    color: rgb(0, 0, 15%);
+
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+}
+
+.cute {
+    width: 200px;
+    height: auto;
+    margin: 100px 0px 0px 1170px;
+}
+
+.inicio {
+    width: 70px;
+    height: 80px;
+    margin: 0px 0px 0px 950px;
+}
+
+.consola {
+    width: 80px;
+    height: auto;
+}
+
+.coqueto {
+    width: 150px;
+    height: 200px;
+    margin: 95px 100px 0px 0px;
+}
+
+.TEXTO {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    top: 210px;
+    justify-content: space-around;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 210px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/* tarjetas desde aqui*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 5.25vmin;
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-size: max(10pt, 2.5vmin);
+    line-height: 1.4;
+    color: #39210e;
+    margin-bottom: 1.5rem;
+}
+
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    width: 60vmin;
+    height: 20em;
+    border: 6px solid;
+    border-image: linear-gradient(-50deg, rgb(128, 62, 0), #b0b300, rgb(139, 102, 34), rgb(128, 109, 0), rgb(238, 208, 144), #e69d00, rgb(128, 77, 0)) 1;
+    margin: 2rem auto;
+    transition: .3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.overlay {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 1rem .75rem;
+    background: #fd8a06ad;
+    transition: .4s ease-in-out;
+    z-index: 1;
+}
+
+.overlay-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: .5rem 0 0 .5rem;
+    border: 3px solid;
+    border-image:
+        linear-gradient(to bottom,
+            #AEA724 5%,
+            rgb(139, 128, 34) 35% 65%,
+            #AEA724 95%) 0 0 0 100%;
+    transition: .3s ease-in-out .2s;
+    z-index: 1;
+}
+
+.img {
+    width: 1300px;
+    transition: .3s ease-in-out;
+    border: 1px solid rgb(197, 194, 5);
+}
+
+.dots {
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    height: 4vmin;
+    transition: .3s ease-in-out .3s;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: yellow;
+    border: 1px solid indigo;
+    border-radius: 50%;
+    transition: .3s ease-in-out .3s;
+}
+
+.text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60vmin;
+    height: 100%;
+    padding: 3vmin 4vmin;
+    background: #fff;
+    box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / .4);
+    overflow-y: scroll;
+}
+
+.wrap:hover .overlay {
+    transform: translateX(-60vmin);
+}
+
+.wrap:hover .img {
+    width: 30vmin;
+}
+
+.wrap:hover .overlay-content {
+    border: none;
+    transition-delay: .2s;
+    transform: translateX(60vmin);
+}
+
+.wrap:hover .dots {
+    transform: translateX(1rem);
+}
+
+.wrap:hover .dots .dot {
+    background: white;
+}
+
+
+/* Animations and timing delays */
+.animate {
+    animation-duration: 0.7s;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+    animation-fill-mode: backwards;
+}
+
+/* Pop In */
+.pop {
+    animation-name: pop;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+/* Slide In */
+.slide {
+    animation-name: slide;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(4em, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* Slide Left */
+.slide-left {
+    animation-name: slide-left;
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translate(-40px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.slide-up {
+    animation-name: slide-up;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(3em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+.delay-4 {
+    animation-delay: 1.2s;
+}
+
+.delay-5 {
+    animation-delay: 1.5s;
+}
+
+.delay-6 {
+    animation-delay: 1.8s;
+}
+
+.delay-7 {
+    animation-delay: 2.1s;
+}
+
+.delay-8 {
+    animation-delay: 2.4s;
+}
